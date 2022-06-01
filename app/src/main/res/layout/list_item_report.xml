@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="@dimen/dip_4"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="@dimen/dip_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dip_8">
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:shape_roundRect_bottomLeftRadius="4dp"
+            app:shape_roundRect_bottomRightRadius="4dp"
+            app:shape_roundRect_topLeftRadius="4dp"
+            app:shape_roundRect_topRightRadius="4dp">
+
+            <ImageView
+                android:id="@+id/img_item_report"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/empty_image_product"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/image_item_report" />
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dip_16">
+
+            <TextView
+                android:id="@+id/tv_item_report_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Lemon"
+                style="@style/TextRegularPrimary" />
+
+            <TextView
+                android:id="@+id/tv_item_report_product_in_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="Keluar: 12 Items"
+                android:layout_marginTop="@dimen/dip_8"
+                android:textColor="@color/colorRed"
+                style="@style/TextRegularPrimary" />
+
+            <TextView
+                android:id="@+id/tv_item_report_product_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                tools:text="Sisa: 60 Items"
+                android:layout_marginTop="@dimen/dip_8"
+                style="@style/TextRegularSecondary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="20-12-2020"
+            android:textSize="12sp"
+            android:layout_marginStart="@dimen/dip_8"
+            style="@style/TextRegularSecondary" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

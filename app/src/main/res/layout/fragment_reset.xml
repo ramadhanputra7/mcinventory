@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.resetpassword.ResetFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:src="@drawable/illustration_reset_password"
+                android:contentDescription="@string/illustration_reset_password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/masukkan_email_untuk_reset_password"
+                android:layout_marginTop="@dimen/dip_30"
+                style="@style/TextRegularPrimary"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_email_reset_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email_reset_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_reset_password"
+                android:layout_marginTop="@dimen/dip_30"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:text="@string/reset_sekarang"
+                style="@style/Button" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading_reset_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+</FrameLayout>

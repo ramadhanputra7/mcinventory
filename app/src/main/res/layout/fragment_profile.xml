@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dip_16"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="@string/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile"
+                    android:layout_marginStart="@dimen/dip_16"
+                    style="@style/TextRegularPrimary"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/dip_25"
+                    android:layout_marginTop="@dimen/dip_40"
+                    tools:ignore="UselessParent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.github.florent37.shapeofview.shapes.RoundRectView
+                            android:id="@+id/layout_img_profile"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerHorizontal="true"
+                            android:elevation="2dp"
+                            app:shape_roundRect_bottomLeftRadius="4dp"
+                            app:shape_roundRect_bottomRightRadius="4dp"
+                            app:shape_roundRect_topLeftRadius="4dp"
+                            app:shape_roundRect_topRightRadius="4dp">
+
+                            <ImageView
+                                android:id="@+id/img_profile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/blank_image_profile"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="@string/image_profile" />
+
+                        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                        <TextView
+                            android:id="@+id/tv_position_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/layout_img_profile"
+                            tools:text="Admin Gundang"
+                            android:layout_centerHorizontal="true"
+                            style="@style/TextRegularSecondary"
+                            android:layout_marginTop="@dimen/dip_8" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/dip_20"
+                        android:layout_marginStart="@dimen/dip_16">
+
+                        <TextView
+                            android:id="@+id/tv_name_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            style="@style/TextRegularPrimary"
+                            tools:text="Johnny Rio" />
+
+                        <TextView
+                            android:id="@+id/tv_email_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            style="@style/TextRegularSecondary"
+                            tools:text="riojohn@gmail.com"
+                            android:layout_marginTop="@dimen/dip_4" />
+
+                        <TextView
+                            android:id="@+id/tv_phone_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            style="@style/TextRegularSecondary"
+                            tools:text="081232720821"
+                            android:layout_marginTop="@dimen/dip_8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider"
+                    android:layout_marginTop="@dimen/dip_8"
+                    android:layout_marginHorizontal="@dimen/dip_25" />
+
+                <Button
+                    android:id="@+id/btn_to_edit_profile"
+                    android:layout_marginTop="@dimen/dip_40"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    android:text="@string/edit_profil"
+                    style="@style/Button" />
+
+                <Button
+                    android:id="@+id/btn_to_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ganti_password"
+                    android:layout_marginVertical="@dimen/dip_8"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    style="@style/Button" />
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keluar"
+                    android:textColor="@color/colorRed"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    android:fontFamily="@font/quicksand_regular"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    style="?attr/materialButtonOutlinedStyle"
+                    app:strokeColor="@color/colorRed" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+</FrameLayout>

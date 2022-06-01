@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="@string/dashboard"
+                style="@style/TextRegularPrimary"
+                android:layout_marginStart="@dimen/dip_30" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.github.florent37.shapeofview.shapes.CircleView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:elevation="1dp"
+                    android:layout_marginTop="@dimen/dip_20"
+                    android:backgroundTint="@color/colorTextPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/logo"
+                            android:contentDescription="@string/logo" />
+                    </LinearLayout>
+
+                </com.github.florent37.shapeofview.shapes.CircleView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="McDonalds Transmart 309"
+                    style="@style/TextRegularPrimary"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/dip_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="McInventory"
+                    style="@style/TextBoldAccent"
+                    android:textColor="@color/design_default_color_error"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/dip_4" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/dip_40"
+                    android:layout_marginHorizontal="@dimen/dip_25">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_product"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dip_4"
+                        android:layout_marginEnd="@dimen/dip_4"
+                        android:elevation="@dimen/dip_4"
+                        app:cardBackgroundColor="@color/design_default_color_error">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dip_40"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_product"
+                                android:contentDescription="@string/icon_product" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/produk"
+                                style="@style/TextBoldWhite"
+                                android:textSize="16sp"
+                                android:layout_marginTop="@dimen/dip_16" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_logistic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dip_4"
+                        android:layout_marginStart="@dimen/dip_4"
+                        android:elevation="@dimen/dip_4"
+                        app:cardBackgroundColor="@color/design_default_color_error">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dip_40"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="50dp"
+                                android:contentDescription="@string/icon_box"
+                                android:src="@drawable/ic_box" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/barang"
+                                style="@style/TextBoldWhite"
+                                android:textSize="16sp"
+                                android:layout_marginTop="@dimen/dip_16" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/dip_8"
+                    android:layout_marginHorizontal="@dimen/dip_25">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_report"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dip_4"
+                        android:layout_marginEnd="@dimen/dip_4"
+                        android:elevation="@dimen/dip_4"
+                        app:cardBackgroundColor="@color/design_default_color_error">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dip_40"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_report"
+                                android:contentDescription="@string/icon_report" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/laporan"
+                                style="@style/TextBoldWhite"
+                                android:textSize="16sp"
+                                android:layout_marginTop="@dimen/dip_16" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dip_4"
+                        android:layout_marginStart="@dimen/dip_4"
+                        android:elevation="@dimen/dip_4"
+                        app:cardBackgroundColor="@color/design_default_color_error">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dip_40"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_akun"
+                                android:contentDescription="@string/icon_akun" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile"
+                                style="@style/TextBoldWhite"
+                                android:textSize="16sp"
+                                android:layout_marginTop="@dimen/dip_16" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>

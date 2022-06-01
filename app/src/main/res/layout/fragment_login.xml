@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.login.LoginFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/dip_25"
+                android:layout_marginTop="@dimen/dip_80"
+                android:gravity="end">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tv_selamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26sp"
+                        android:text="@string/selamat"
+                        style="@style/TextRegularPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_datang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/datang"
+                        android:layout_marginStart="@dimen/dip_20"
+                        android:layout_marginTop="@dimen/dip_4"
+                        android:textSize="26sp"
+                        android:layout_below="@+id/tv_selamat"
+                        style="@style/TextRegularPrimary" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/illustration_login"
+                    android:layout_marginEnd="@dimen/dip_16"
+                    android:layout_marginStart="@dimen/dip_8"
+                    android:contentDescription="@string/illustration_login" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_40">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_email_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    app:endIconMode="clear_text"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_email_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/dip_20"
+                    app:endIconMode="password_toggle"
+                    style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_password_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/lupa_password"
+                style="@style/TextLightPrimary"
+                android:layout_marginTop="@dimen/dip_8"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dip_20" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_marginTop="@dimen/dip_40"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:text="@string/login"
+                style="@style/Button" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="7"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginVertical="@dimen/dip_16">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="3"
+                    android:background="@color/colorTextSecondaryLight"
+                    android:layout_marginEnd="@dimen/dip_20" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    style="@style/TextRegularSecondary"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="3"
+                    android:background="@color/colorTextSecondaryLight"
+                    android:layout_marginStart="@dimen/dip_20" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_to_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/daftar"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                style="@style/Button" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+</FrameLayout>

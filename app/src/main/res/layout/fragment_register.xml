@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.register.RegisterFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dip_30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/dip_16"
+                android:layout_marginTop="@dimen/dip_40"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/illustration_register"
+                    android:contentDescription="@string/illustration_register" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextRegularPrimary"
+                    android:textSize="20sp"
+                    android:layout_marginStart="@dimen/dip_16"
+                    android:layout_gravity="center"
+                    android:text="@string/registrasi_akun" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_name_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nama_lengkap"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_name_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_position_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/jabatan"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_position_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_email_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_phone_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/telepon"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_phone_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_password_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_password_confirm_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/konfirmasi_password"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:layout_marginTop="@dimen/dip_20"
+                style="@style/TextInputLayout.OutlineBox.CustomFont">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password_confirm_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_marginTop="@dimen/dip_30"
+                android:layout_marginHorizontal="@dimen/dip_20"
+                android:text="@string/daftar_sekarang"
+                style="@style/Button" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dip_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/sudah_punya_akun"
+                    style="@style/TextRegularPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_to_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginStart="@dimen/dip_8"
+                    android:text="@string/login"
+                    android:textColor="@color/colorAccent"
+                    style="@style/TextBoldAccent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+</FrameLayout>

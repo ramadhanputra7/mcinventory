@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">InventarisBarang</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selamat">Selamat</string>
+    <string name="datang">Datang</string>
+    <string name="illustration_login">illustration login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="login">Login</string>
+    <string name="or">OR</string>
+    <string name="daftar">Daftar</string>
+    <string name="illustration_register">illustration register</string>
+    <string name="registrasi_akun">Registrasi Akun</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="jabatan">Jabatan</string>
+    <string name="daftar_sekarang">Daftar Sekarang</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="illustration_register_success">illustration register success</string>
+    <string name="registrasi_berhasil_n_silahkan_login_kembali">Registrasi Berhasil.\n Silahkan Login Kembali.</string>
+    <string name="kembali_login">Kembali Login</string>
+    <string name="illustration_reset_password">illustration reset password</string>
+    <string name="masukkan_email_untuk_reset_password">Masukkan Email Untuk Reset Password</string>
+    <string name="reset_sekarang">Reset Sekarang</string>
+    <string name="illustration_check_email">illustration check email</string>
+    <string name="silahkan_cek_email_untuk_reset_password">Silahkan Cek Email Untuk Reset Password.</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logo">logo</string>
+    <string name="inventaris_barang">Inventaris Barang</string>
+    <string name="cv_bangkit_jayaa">CV Bangkit Jayaa</string>
+    <string name="icon_product">icon product</string>
+    <string name="produk">Produk</string>
+    <string name="icon_box">icon box</string>
+    <string name="icon_report">icon report</string>
+    <string name="icon_akun">icon akun</string>
+    <string name="akun">Akun</string>
+    <string name="icon_back">icon back</string>
+    <string name="icon_option">icon option</string>
+    <string name="tambah_product">Tambah Produk</string>
+    <string name="illustrasi_tambah_produk">illustrasi tambah produk</string>
+    <string name="nama_produk">Nama Produk</string>
+    <string name="kode_produk">Kode Produk</string>
+    <string name="tambah_produk">Tambah Produk</string>
+    <string name="edit_produk">Edit Produk</string>
+    <string name="detail_produk">Detail Produk</string>
+    <string name="produk_item">Produk Item</string>
+    <string name="image_item_product">image item product</string>
+    <string name="tambah_produk_item">Tambah Produk Item</string>
+    <string name="btn_add_foto">btn add foto</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="edit_produk_item">Edit Produk Item</string>
+    <string name="image_profile">image profile</string>
+    <string name="profile">Profile</string>
+    <string name="keluar">Keluar</string>
+    <string name="ganti_password">Ganti Password</string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="telepon">Telepon</string>
+    <string name="edit">Edit</string>
+    <string name="illustrasi_ganti_password">illustrasi ganti password</string>
+    <string name="password_lama">Password Lama</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="konfirmasi_password_baru">Konfirmasi Password Baru</string>
+    <string name="barang">Barang</string>
+    <string name="barang_masuk">Barang Masuk</string>
+    <string name="barang_keluar">Barang Keluar</string>
+    <string name="illustrasi_barang_keluar">illustrasi barang keluar</string>
+    <string name="kurangi">Kurangi</string>
+    <string name="jumlah_item">Jumlah item</string>
+    <string name="jumlah_item_masuk">Jumlah item masuk</string>
+    <string name="jumlah_item_keluar">Jumlah item keluar</string>
+    <string name="illustrasi_barang_masuk">illustrasi barang masuk</string>
+    <string name="tambah">Tambah</string>
+    <string name="laporan">Laporan</string>
+    <string name="image_item_report">image_item_report</string>
+
+    <!--Error edit text empty -->
+    <string name="email_empty">Email tidak boleh kosong!</string>
+    <string name="name_empty">Nama tidak boleh kosong!</string>
+    <string name="phone_empty">Telepon tidak boleh kosong!</string>
+    <string name="position_empty">Jabatan tidak boleh kosong!</string>
+    <string name="password_empty">Password tidak boleh kosong!</string>
+    <string name="password_confirm_empty">Konfirmasi password tidak boleh kosong!</string>
+    <string name="password_confirm_no_match">Konfirmasi password tidak sama!</string>
+    <string name="password_old_empty">Password tidak boleh kosong!</string>
+    <string name="password_new_empty">Password baru tidak boleh kosong!</string>
+    <string name="product_name_empty">Nama produk tidak boleh kosong!</string>
+    <string name="total_item_product_empty">Jumlah produk tidak boleh kosong!</string>
+    <string name="item_in_empty">Jumlah item masuk tidak boleh kosong!</string>
+    <string name="item_out_empty">Jumlah item keluar tidak boleh kosong!</string>
+    <string name="item_number_error">Angka tidak boleh diawali dengan angka 0</string>
+    <string name="higher_than_stock">Jumlah barang keluar lebih banyak dari pada stok!</string>
+
+    <!--Success Message -->
+    <string name="change_password_message">Password berhasil diganti</string>
+    <string name="edit_profile_message">Profil berhasil diedit</string>
+    <string name="add_product_message">Produk berhasil ditambah</string>
+    <string name="edit_product_message">Produk berhasil diedit</string>
+    <string name="product_item_in_report_message">Produk barang masuk berhasil dicatat</string>
+    <string name="product_item_out_report_message">Produk barang keluar berhasil dicatat</string>
+
+    <string name="illustrasi_data_kosong">illustrasi data kosong</string>
+    <string name="oops">Oops...</string>
+    <string name="data_produk_kosong_silahkan_tambah_produk">Data produk kosong. Silahkan tambah produk.</string>
+    <string name="empty_report">Data report kosong.</string>
+
+
+    <string name="delete">Hapus</string>
+    <string name="cancel">Tidak</string>
+    <string name="product_setting">Pengaturan Produk</string>
+    <string name="logistic_setting">Pengaturan Barang</string>
+    <string name="delete_product">Hapus Produk?</string>
+    <string name="delete_product_subtitle">Apakah anda yakin ingin menghapus</string>
+</resources>

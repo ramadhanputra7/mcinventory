@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.register.RegisterSuccessFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/dip_20">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:src="@drawable/illustration_success_register"
+                android:contentDescription="@string/illustration_register_success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registrasi_berhasil_n_silahkan_login_kembali"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                style="@style/TextRegularPrimary"
+                android:layout_marginTop="@dimen/dip_25" />
+
+            <Button
+                android:id="@+id/btn_to_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kembali_login"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_marginTop="@dimen/dip_40"
+                style="@style/Button" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

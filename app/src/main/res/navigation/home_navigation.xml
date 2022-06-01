@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/navigation_dashboard_fragment">
+
+    <fragment
+        android:id="@+id/navigation_add_product_fragment"
+        android:name="com.azhara.inventarisbarang.home.product.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_navigation_add_product_fragment_to_navigation_product_fragment"
+            app:destination="@id/navigation_product_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_change_password_fragment"
+        android:name="com.azhara.inventarisbarang.home.profile.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_navigation_change_password_fragment_to_navigation_profile_fragment"
+            app:destination="@id/navigation_profile_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dashboard_fragment"
+        android:name="com.azhara.inventarisbarang.home.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_fragment_to_navigation_item_fragment"
+            app:destination="@id/navigation_item_fragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_fragment_to_navigation_account_fragment"
+            app:destination="@id/navigation_profile_fragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_fragment_to_navigation_report_fragment"
+            app:destination="@id/navigation_report_fragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_fragment_to_navigation_product_fragment"
+            app:destination="@id/navigation_product_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_edit_product_fragment"
+        android:name="com.azhara.inventarisbarang.home.product.EditProductFragment"
+        android:label="fragment_edit_product"
+        tools:layout="@layout/fragment_edit_product" >
+        <action
+            android:id="@+id/action_navigation_edit_product_fragment_to_navigation_product_fragment"
+            app:destination="@id/navigation_product_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment" />
+        <argument
+            android:name="productId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productId" />
+        <argument
+            android:name="productName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productName" />
+        <argument
+            android:name="productImg"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productImg" />
+        <argument
+            android:name="totalItem"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="totalItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_edit_profile_fragment"
+        android:name="com.azhara.inventarisbarang.home.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_navigation_edit_profile_fragment_to_navigation_profile_fragment"
+            app:destination="@id/navigation_profile_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment" />
+        <argument
+            android:name="position"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="position" />
+        <argument
+            android:name="imgUrl"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="img" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="name" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="phone" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="email" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_item_fragment"
+        android:name="com.azhara.inventarisbarang.home.Item.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_navigation_item_fragment_to_navigation_item_in_fragment"
+            app:destination="@id/navigation_item_in_fragment" />
+        <action
+            android:id="@+id/action_navigation_item_fragment_to_navigation_item_out_fragment"
+            app:destination="@id/navigation_item_out_fragment" />
+        <argument
+            android:name="message"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="message" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_item_in_fragment"
+        android:name="com.azhara.inventarisbarang.home.Item.ItemInFragment"
+        android:label="fragment_item_in"
+        tools:layout="@layout/fragment_item_in" >
+        <action
+            android:id="@+id/action_navigation_item_in_fragment_to_navigation_item_fragment"
+            app:destination="@id/navigation_item_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment" />
+        <argument
+            android:name="productId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productId" />
+        <argument
+            android:name="totalItem"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="totalItem" />
+        <argument
+            android:name="productName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productName" />
+        <argument
+            android:name="imgUrl"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="imgUrl" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_item_out_fragment"
+        android:name="com.azhara.inventarisbarang.home.Item.ItemOutFragment"
+        android:label="fragment_item_out"
+        tools:layout="@layout/fragment_item_out" >
+        <action
+            android:id="@+id/action_navigation_item_out_fragment_to_navigation_item_fragment"
+            app:destination="@id/navigation_item_fragment"
+            app:popUpTo="@id/navigation_dashboard_fragment" />
+        <argument
+            android:name="productId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productId" />
+        <argument
+            android:name="totalItem"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="totalItem" />
+        <argument
+            android:name="productName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="productName" />
+        <argument
+            android:name="imgUrl"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="imgUrl" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile_fragment"
+        android:name="com.azhara.inventarisbarang.home.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_fragment_to_navigation_edit_profile_fragment"
+            app:destination="@id/navigation_edit_profile_fragment" />
+        <action
+            android:id="@+id/action_navigation_profile_fragment_to_navigation_change_password_fragment"
+            app:destination="@id/navigation_change_password_fragment" />
+        <argument
+            android:name="success_message"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="success" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_report_fragment"
+        android:name="com.azhara.inventarisbarang.home.report.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/navigation_product_fragment"
+        android:name="com.azhara.inventarisbarang.home.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_navigation_product_fragment_to_navigation_add_product_fragment"
+            app:destination="@id/navigation_add_product_fragment" />
+        <action
+            android:id="@+id/action_navigation_product_fragment_to_navigation_edit_product_fragment"
+            app:destination="@id/navigation_edit_product_fragment" />
+    </fragment>
+</navigation>

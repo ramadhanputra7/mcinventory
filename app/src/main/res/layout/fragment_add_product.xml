@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.product.AddProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dip_16"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <ImageView
+                    android:id="@+id/back_button_add_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="@string/icon_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tambah_product"
+                    android:layout_marginStart="@dimen/dip_16"
+                    style="@style/TextRegularPrimary"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_40"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <com.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:elevation="4dp"
+                        app:shape_roundRect_bottomLeftRadius="4dp"
+                        app:shape_roundRect_bottomRightRadius="4dp"
+                        app:shape_roundRect_topLeftRadius="4dp"
+                        app:shape_roundRect_topRightRadius="4dp">
+
+                        <ImageView
+                            android:id="@+id/img_add_product"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/produk_item"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/empty_image_product" />
+
+                    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_choose_pic_add_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:contentDescription="@string/btn_add_foto"
+                        android:tint="@color/colorWhite"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </FrameLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_add_name_product"
+                    style="@style/TextInputLayout.OutlineBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    android:layout_marginTop="@dimen/dip_40"
+                    android:hint="@string/nama_produk"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_add_name_product_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_add_number_product"
+                    style="@style/TextInputLayout.OutlineBox.CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    android:layout_marginTop="@dimen/dip_20"
+                    android:hint="@string/jumlah"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_add_number_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:lines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_add_product"
+                    style="@style/Button"
+                    android:layout_marginHorizontal="@dimen/dip_20"
+                    android:layout_marginTop="@dimen/dip_30"
+                    android:text="@string/tambah_produk" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_add_product"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+</FrameLayout>
